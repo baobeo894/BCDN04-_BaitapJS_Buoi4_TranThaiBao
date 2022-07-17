@@ -150,37 +150,37 @@ function ngaymai() {
     console.log(Number(day), Number(month), Number(year));
 
     if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
-        
-            if (month != 12 && day == 31) {
-                day = 1;
-                month++;
-                var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
-            }
-            else if (month == 12 && day == 31) {
-                day = 1;
-                year++;
-                month = 1;
-                var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
-            }else{
-                day ++;
-                month = month;
-                var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
-            }
+
+        if (month != 12 && day == 31) {
+            day = 1;
+            month++;
+            var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
         }
-    
+        else if (month == 12 && day == 31) {
+            day = 1;
+            year++;
+            month = 1;
+            var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
+        } else {
+            day++;
+            month = month;
+            var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+    }
+
     else if (month == 4 || month == 6 || month == 9 || month == 11) {
-        
-            if (day == 30) {
-                day = 1;
-                month++;
-                var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
-            } else {
-                day++;
-                month = month;
-                var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
-            }
+
+        if (day == 30) {
+            day = 1;
+            month++;
+            var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
+        } else {
+            day++;
+            month = month;
+            var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
         }
-    
+    }
+
     else {
         if (day == 28) {
             day = 1;
@@ -188,7 +188,7 @@ function ngaymai() {
             var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
         }
         else {
-            month=month;
+            month = month;
             day++;
             var tomo = Number(day) + "/" + Number(month) + "/" + Number(year)
         }
@@ -199,6 +199,75 @@ function ngaymai() {
 
 document.getElementById("btnngaymai").onclick = ngaymai;
 
+
+
+function homqua() {
+
+    var day = document.getElementById("day").value
+    var month = document.getElementById("month").value;
+    var year = document.getElementById("year").value;
+    console.log(Number(day), Number(month), Number(year));
+
+    if (month == 1 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+
+        if (month != 12 && day == 1) {
+            day = 1;
+            month++;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+        else if (month == 12 && day == 31) {
+            day = 1;
+            year++;
+            month = 1;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        } else {
+            day++;
+            month = month;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+    }
+
+    else if (month == 4 || month == 6 || month == 9 || month == 11) {
+
+        if (day == 1) {
+            day = 31;
+            month--;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        } else {
+            day--;
+            month = month;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+    }
+    else if (month == 3) {
+        if (day == 1) {
+            day = 28;
+            month--;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        } else {
+            day--;
+            month = month
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+    }
+
+    else {
+        if (day == 1) {
+            day = 31;
+            month--;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+        else {
+            month = month;
+            day--;
+            var yesterday = Number(day) + "/" + Number(month) + "/" + Number(year)
+        }
+    }
+
+    document.getElementById("txtResultquamai").innerHTML = yesterday;
+}
+
+document.getElementById("btnhomqua").onclick = homqua;
 // bai 6 
 function tinhngay() {
 
