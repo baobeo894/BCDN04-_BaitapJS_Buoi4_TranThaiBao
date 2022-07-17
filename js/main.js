@@ -297,7 +297,7 @@ document.getElementById("btnngay").onclick = tinhngay;
 
 // bài 7
 
-function tinhngay() {
+function docso() {
 
 
     var so3chuso = document.getElementById("so3chuso").value;
@@ -329,7 +329,7 @@ if(soHangChuc == 1){
 }else if(soHangChuc == 9) {
     var chuc ="Chín mươi";
 }else {
-    var chuc = "";
+    var chuc = "lẻ";
 }
 if(soDonVi == 1){
     var donvi = "một";
@@ -376,7 +376,7 @@ else if (sohangtram == 8){
     document.getElementById("txtResultdocso").innerHTML = tram + "\n" + chuc + "\n" +donvi;
 }
 
-document.getElementById("btndocso").onclick = tinhngay;
+document.getElementById("btndocso").onclick = docso;
 
 
 
