@@ -16,8 +16,9 @@ html {
 
 .bai1{
     border: 1px solid black;
+    margin-top: 20px;
 }
- .title h2{
+.title h2{
     
     
     background-color: gainsboro;
