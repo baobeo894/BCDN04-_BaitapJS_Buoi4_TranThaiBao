@@ -292,3 +292,101 @@ function tinhngay() {
 }
 
 document.getElementById("btnngay").onclick = tinhngay;
+
+
+
+// bài 7
+
+function tinhngay() {
+
+
+    var so3chuso = document.getElementById("so3chuso").value;
+
+// b2
+var sohangtram = Math.floor(so3chuso / 100);
+var soHangChuc = Math.floor(so3chuso % 100/10);
+var soDonVi = so3chuso % 100 % 10;
+
+
+
+
+if(soHangChuc == 1){
+    var chuc = "mười";
+}else if(soHangChuc == 2){
+    var chuc ="hai mươi";
+}else if(soHangChuc == 3){
+    var chuc ="ba mươi";
+}else if(soHangChuc == 4){
+    var chuc ="Bốn mươi";
+}else if(soHangChuc == 5){
+    var chuc ="Năm mươi";
+}else if(soHangChuc == 6){
+    var chuc ="Sáu mươi";
+}else if(soHangChuc == 7){
+    var chuc ="Bảy mươi";
+}else if(soHangChuc == 8){
+    var chuc ="Tám mươi";
+}else if(soHangChuc == 9) {
+    var chuc ="Chín mươi";
+}else {
+    var chuc = "";
+}
+if(soDonVi == 1){
+    var donvi = "một";
+}else if(soDonVi == 2){
+    var donvi ="hai";
+}else if(soDonVi == 3){
+    var donvi ="ba";
+}else if(soDonVi == 4){
+    var donvi ="Bốn";
+}else if(soDonVi == 5){
+    var donvi ="Năm";
+}else if(soDonVi == 6){
+    var donvi ="Sáu";
+}else if(soDonVi == 7){
+    var donvi ="Bảy";
+}else if(soDonVi == 8){
+    var donvi ="Tám";
+}else if(soDonVi == 9){
+    var donvi ="Chín";
+}else {
+    var donvi = "";
+}
+if(sohangtram == 1){
+    var tram = "Một trăm";
+}else if (sohangtram == 2){
+    var tram ="Hai trăm";
+}else if (sohangtram == 3){
+    var tram ="Ba trăm";
+}else if (sohangtram == 4){
+    var tram ="Bốn trăm";
+}else if (sohangtram == 5){
+    var tram ="Năm trăm"
+}else if (sohangtram == 6){
+    var tram ="Sáu trăm";
+}else if (sohangtram == 7){
+    var tram ="Bảy trăm";
+}
+else if (sohangtram == 8){
+    var tram ="Tám trăm";
+}else {
+    var tram ="Chín trăm";
+}
+
+    document.getElementById("txtResultdocso").innerHTML = tram + "\n" + chuc + "\n" +donvi;
+}
+
+document.getElementById("btndocso").onclick = tinhngay;
+
+
+
+
+
+
+
+
+
+
+
+
+
