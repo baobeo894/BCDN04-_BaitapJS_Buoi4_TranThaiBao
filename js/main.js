@@ -140,3 +140,30 @@ function dudoan() {
 }
 
 document.getElementById("btndoan").onclick = dudoan;
+
+
+
+// bai 6 
+function tinhngay() {
+    
+    
+    var thang = document.getElementById("thang").value;
+    var nam = document.getElementById("nam").value;
+    console.log( Number(thang),Number(nam));
+
+if(thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang ==10 || thang == 12 ){
+    var ngay = "tháng" +"\n"+ Number(thang) + "\n năm" + "\n" + Number(nam) + "\n có 31 ngày";
+}else if (thang == 4 || thang == 6 || thang ==9 || thang == 11 ){
+    var ngay = "tháng" +"\n"+ Number(thang) + "\n năm" + "\n" + Number(nam) + "\n có 30 ngày"; 
+}else {
+    if(nam % 4 == 0){
+        var ngay = "tháng" +"\n"+ Number(thang) + "\n năm" + "\n" + Number(nam) + "\n có 29 ngày";
+    }else {
+        var ngay ="tháng" +"\n"+ Number(thang) + "\n năm" + "\n" + Number(nam) + "\n có 28 ngày";
+    }
+    
+}
+    document.getElementById("txtResultngay").innerHTML =  ngay;
+}
+
+document.getElementById("btnngay").onclick = tinhngay;
