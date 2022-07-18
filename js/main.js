@@ -302,85 +302,123 @@ function docso() {
 
     var so3chuso = document.getElementById("so3chuso").value;
 
-// b2
-var sohangtram = Math.floor(so3chuso / 100);
-var soHangChuc = Math.floor(so3chuso % 100/10);
-var soDonVi = so3chuso % 100 % 10;
+    // b2
+    var sohangtram = Math.floor(so3chuso / 100);
+    var soHangChuc = Math.floor(so3chuso % 100 / 10);
+    var soDonVi = so3chuso % 100 % 10;
 
 
 
 
-if(soHangChuc == 1){
-    var chuc = "mười";
-}else if(soHangChuc == 2){
-    var chuc ="hai mươi";
-}else if(soHangChuc == 3){
-    var chuc ="ba mươi";
-}else if(soHangChuc == 4){
-    var chuc ="Bốn mươi";
-}else if(soHangChuc == 5){
-    var chuc ="Năm mươi";
-}else if(soHangChuc == 6){
-    var chuc ="Sáu mươi";
-}else if(soHangChuc == 7){
-    var chuc ="Bảy mươi";
-}else if(soHangChuc == 8){
-    var chuc ="Tám mươi";
-}else if(soHangChuc == 9) {
-    var chuc ="Chín mươi";
-}else {
-    var chuc = "lẻ";
-}
-if(soDonVi == 1){
-    var donvi = "một";
-}else if(soDonVi == 2){
-    var donvi ="hai";
-}else if(soDonVi == 3){
-    var donvi ="ba";
-}else if(soDonVi == 4){
-    var donvi ="Bốn";
-}else if(soDonVi == 5){
-    var donvi ="Năm";
-}else if(soDonVi == 6){
-    var donvi ="Sáu";
-}else if(soDonVi == 7){
-    var donvi ="Bảy";
-}else if(soDonVi == 8){
-    var donvi ="Tám";
-}else if(soDonVi == 9){
-    var donvi ="Chín";
-}else {
-    var donvi = "";
-}
-if(sohangtram == 1){
-    var tram = "Một trăm";
-}else if (sohangtram == 2){
-    var tram ="Hai trăm";
-}else if (sohangtram == 3){
-    var tram ="Ba trăm";
-}else if (sohangtram == 4){
-    var tram ="Bốn trăm";
-}else if (sohangtram == 5){
-    var tram ="Năm trăm"
-}else if (sohangtram == 6){
-    var tram ="Sáu trăm";
-}else if (sohangtram == 7){
-    var tram ="Bảy trăm";
-}
-else if (sohangtram == 8){
-    var tram ="Tám trăm";
-}else {
-    var tram ="Chín trăm";
-}
+    if (soHangChuc == 1) {
+        var chuc = "mười";
+    } else if (soHangChuc == 2) {
+        var chuc = "hai mươi";
+    } else if (soHangChuc == 3) {
+        var chuc = "ba mươi";
+    } else if (soHangChuc == 4) {
+        var chuc = "Bốn mươi";
+    } else if (soHangChuc == 5) {
+        var chuc = "Năm mươi";
+    } else if (soHangChuc == 6) {
+        var chuc = "Sáu mươi";
+    } else if (soHangChuc == 7) {
+        var chuc = "Bảy mươi";
+    } else if (soHangChuc == 8) {
+        var chuc = "Tám mươi";
+    } else if (soHangChuc == 9) {
+        var chuc = "Chín mươi";
+    } else {
+        var chuc = "lẻ";
+    }
+    if (soDonVi == 1) {
+        var donvi = "một";
+    } else if (soDonVi == 2) {
+        var donvi = "hai";
+    } else if (soDonVi == 3) {
+        var donvi = "ba";
+    } else if (soDonVi == 4) {
+        var donvi = "Bốn";
+    } else if (soDonVi == 5) {
+        var donvi = "Năm";
+    } else if (soDonVi == 6) {
+        var donvi = "Sáu";
+    } else if (soDonVi == 7) {
+        var donvi = "Bảy";
+    } else if (soDonVi == 8) {
+        var donvi = "Tám";
+    } else if (soDonVi == 9) {
+        var donvi = "Chín";
+    } else {
+        var donvi = "";
+    }
+    if (sohangtram == 1) {
+        var tram = "Một trăm";
+    } else if (sohangtram == 2) {
+        var tram = "Hai trăm";
+    } else if (sohangtram == 3) {
+        var tram = "Ba trăm";
+    } else if (sohangtram == 4) {
+        var tram = "Bốn trăm";
+    } else if (sohangtram == 5) {
+        var tram = "Năm trăm"
+    } else if (sohangtram == 6) {
+        var tram = "Sáu trăm";
+    } else if (sohangtram == 7) {
+        var tram = "Bảy trăm";
+    }
+    else if (sohangtram == 8) {
+        var tram = "Tám trăm";
+    } else {
+        var tram = "Chín trăm";
+    }
 
-    document.getElementById("txtResultdocso").innerHTML = tram + "\n" + chuc + "\n" +donvi;
+    document.getElementById("txtResultdocso").innerHTML = tram + "\n" + chuc + "\n" + donvi;
 }
 
 document.getElementById("btndocso").onclick = docso;
 
 
+// bài 8
 
+function sinhvienxatuongnhat() {
+    // sinh vien 1
+    var ten1 = document.getElementById("ten1").value;
+    var x1 = document.getElementById("x1").value;
+    var y1 = document.getElementById("y1").value
+    // sinh vien 2
+    var ten2 = document.getElementById("ten2").value;
+    var x2 = document.getElementById("x2").value;
+    var y2 = document.getElementById("y2").value;
+    // sinh vien 3
+    var ten3 = document.getElementById("ten3").value;
+    var x3 = document.getElementById("x3").value;
+    var y3 = document.getElementById("y3").value;
+    // trường học;
 
+    var xt = document.getElementById("xt").value;
+    var yt = document.getElementById("yt").value;
+
+    // khoang cách của sinh vien 1
+    var kc1 = Math.sqrt((Number(xt) - Number(x1))*(Number(xt) - Number(x1)) + (Number(yt) - Number(y1))*(Number(yt) - Number(y1)));
+    // khoang cach cua sinh viên 2
+    var kc2 = Math.sqrt((Number(xt) - Number(x2))*(Number(xt) - Number(x2)) + (Number(yt) - Number(y2))*(Number(yt) - Number(y2)));
+    // khoảng cách của sinh viên 3
+
+    var kc3 = Math.sqrt((Number(xt) - Number(x3))*(Number(xt) - Number(x3)) + (Number(yt) - Number(y3))*(Number(yt) - Number(y3)));
+    console.log(Number(kc1), Number(kc2), Number(kc3));
+
+    if (Number(kc1) > Number(kc2) && Number(kc1) > Number(kc3)) {
+        var kcxn = ten1 + "\n xa nhất";
+    } else if (Number(kc2) > Number(kc1) && Number(kc2) > Number(kc3)) {
+        var kcxn = ten2 + "\n xa nhất";
+    } else {
+        var kcxn = ten3 + "\n xa nhất";
+    }
+
+    document.getElementById("txtResulttoado").innerHTML = kcxn;
+}
+document.getElementById("btntoado").onclick = sinhvienxatuongnhat;
 
 
 
